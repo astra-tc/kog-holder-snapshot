@@ -1,0 +1,11 @@
+[
+  {"id": "M1 ties by owner descending", "file": "src/snapshot.ts", "from": "return a[0] < b[0] ? -1 : a[0] > b[0] ? 1 : 0;", "to": "return a[0] < b[0] ? 1 : a[0] > b[0] ? -1 : 0;"},
+  {"id": "M2 zero balances counted", "file": "src/snapshot.ts", "from": "if (amount <= 0n) return null;", "to": "if (amount < 0n) return null;"},
+  {"id": "M3 other mints counted", "file": "src/snapshot.ts", "from": "info.mint !== mint ||", "to": ""},
+  {"id": "M4 token account exclusion ignored", "file": "src/snapshot.ts", "from": "exOwners.has(owner) || exAccounts.has(item.pubkey)", "to": "exOwners.has(owner)"},
+  {"id": "M5 trailing newline in hash text", "file": "src/snapshot.ts", "from": ".join('\\n');", "to": ".join('\\n') + '\\n';"},
+  {"id": "M6 total only over top", "file": "src/snapshot.ts", "from": "for (const [, v] of ranked) total += v;", "to": "for (const [, v] of ranked.slice(0, top)) total += v;"},
+  {"id": "M7 highest slot instead of lowest", "file": "src/fetch.ts", "from": "Math.min(...answers", "to": "Math.max(...answers"},
+  {"id": "M8 non account types counted", "file": "src/snapshot.ts", "from": "if (data.parsed.type !== 'account') return null;", "to": ""},
+  {"id": "M9 RPC URL leaks in CLI errors", "file": "src/cli.ts", "from": "if (rpc) msg = msg.split(rpc).join('<rpc>');", "to": ""}
+]

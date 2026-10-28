@@ -1,0 +1,41 @@
+{
+  "name": "@astra-tc/kog-holder-snapshot",
+  "version": "0.1.0",
+  "description": "Reproducible ranked holder snapshot of a Solana SPL Token or Token 2022 mint, with sha256",
+  "main": "dist/index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "node --import tsx --test test/*.test.ts",
+    "coverage": "c8 --reporter=text --include=src node --import tsx --test test/*.test.ts",
+    "mutation": "node scripts/mutation-check.mjs"
+  },
+  "keywords": [],
+  "author": "Astra Trading Co",
+  "license": "MIT",
+  "type": "module",
+  "devDependencies": {
+    "@types/node": "^26.6.5",
+    "c8": "^12.0.0",
+    "tsx": "^4.23.15",
+    "typescript": "^5.9.3"
+  },
+  "types": "dist/index.d.ts",
+  "bin": {
+    "kog-snapshot": "dist/bin.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/astra-tc/kog-holder-snapshot"
+  }
+}

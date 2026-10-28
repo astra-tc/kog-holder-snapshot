@@ -43,7 +43,7 @@ Rules:
 ```sh
 npm test          # node:test via tsx, no network
 npm run coverage
-npm run mutation  # plants 9 bugs, all caught
+npm run mutation  # plants 8 bugs, all caught
 ```
 
 | Item | Tests |
